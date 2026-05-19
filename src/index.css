@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Hanken Grotesk", sans-serif;
+  --font-label: "IBM Plex Sans", sans-serif;
+
+  --color-primary: #1b5e20;
+  --color-primary-container: #acf4a4;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #002203;
+
+  --color-secondary: #4a626d;
+  --color-secondary-container: #cde6f4;
+  --color-on-secondary: #ffffff;
+
+  --color-background: #f9f9f9;
+  --color-on-background: #1a1c1c;
+
+  --color-surface: #ffffff;
+  --color-surface-variant: #eeeeee;
+  --color-outline: #c0c9bb;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-body antialiased;
+  }
+}
+
+.industrial-glow {
+  transition: all 0.3s ease;
+}
+
+.industrial-glow:hover {
+  @apply border-primary;
+  box-shadow: 0 0 15px rgba(27, 94, 32, 0.1);
+}
